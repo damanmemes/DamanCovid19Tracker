@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Covid-19 Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Daman Covid-19 Tracker</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Nothing</a></li>
+        <li><a href="#">To</a></li>
+        <li><a href="#">See</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Daman Covid Tracker</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Daman</a></li>
+        <!-- <li><a href="#section2">Age</a></li>
+        <li><a href="#section3">Gender</a></li>
+        <li><a href="#section3">Geo</a></li> -->
+      </ul><br>
+    </div>
+    <br>
+    
+    <div class="col-sm-9">
+      <div class="well">
+        <h4>Welcome to Daman's Covid-19 Tracker</h4>
+        <!-- <p>Some text..</p> -->
+      </div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+			<h4>Confirmed Cases</h4>
+			<p id="confirmed"></p>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Active cases</h4>
+            <p id="active"></p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Recovered</h4>
+            <p id="recovered"></p> 
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Deaths</h4>
+            <p id="deceased">%</p> 
+          </div>
+		</div>
+
+		<div class="col-sm-3">
+			<div class="well">
+			  <h4>New Cases today</h4>
+			  <p id="confirmed_today">%</p> 
+			</div>
+		  </div>
+
+		  <div class="col-sm-3">
+			<div class="well">
+			  <h4>Recovered today</h4>
+			  <p id="recovered_today">%</p> 
+			</div>
+		</div>
+
+		<div class="col-sm-3">
+          <div class="well">
+			  <h4>Made with ❤️ in Daman</h4>
+            <p>Say hello<a href="https://instagram.com/daman_memes" target="_blank"> @Daman_memes</a></p> 
+		  </div>
+		</div>
+		  
+		<div class="col-sm-3">
+		  <div class="well">
+			<h4>Acknowledgements</h4>
+			<p>Covid-19 Data provided by <a href="https://api.covid19india.org" target="_blank">https://api.covid19india.org</a></p> 
+		  </div>
+		</div>
+
+      
+        </div>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
