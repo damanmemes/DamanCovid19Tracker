@@ -6,12 +6,12 @@ function getCovidStats() {
     fetch('https://api.covid19india.org/state_district_wise.json')
 	.then(function(resp) { return resp.json() })
 	.then(function(data) {
-		let active = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.active;
-		let confirmed = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.confirmed;
-		let deceased = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.deceased;
-		let recovered = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.recovered;
-		let recovered_today = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.delta.recovered;
-		let confirmed_today = data["Dadra and Nagar Haveli and Daman and Diu"].districtData.Daman.delta.confirmed;
+		let active = data.Gujarat.districtData.Valsad.active;
+		let confirmed = data.Gujarat.districtData.Valsad.confirmed;
+		let deceased = data.Gujarat.districtData.Valsad.deceased;
+		let recovered = data.Gujarat.districtData.Valsad.recovered;
+		let recovered_today = data.Gujarat.districtData.Valsad.delta.recovered;
+		let confirmed_today = data.Gujarat.districtData.Valsad.delta.confirmed;
 		let date = Date()
 
 
@@ -30,7 +30,7 @@ function getCovidStats() {
 	.catch(function() {
 		console.log("error");
 	})
-	setTimeout(getCovidStats, 3600) // updates every 1 hour
+	setTimeout(getCovidStats, 43200000) // update every 12 hours
 
 
 	function newFunction() {
